@@ -490,3 +490,92 @@ a {
    width: 28px;
    margin-left: 5px;
 }
+
+/* 
+   RIGHT APP MAIN SECTION
+*/
+
+.right_app__main {
+   background-image: url("../images/chat-back.jpg");
+   background-repeat: no-repeat;
+   width: calc(100vw - 300px);
+   height: calc(100vh - 120px);
+   overflow-y: scroll;
+   margin: 0 auto;
+}
+
+.message__list {
+   display: flex;
+   justify-items: flex-end;
+   flex-direction: column-reverse;
+   padding: 20px;
+}
+
+.message__list .select-box {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 75vh;
+}
+
+.select-chat {
+   background-color: rgba(0,0,0,0.5);
+   color: white;
+   padding: 5px 10px;
+   border-radius: 20px;
+}
+
+.message__item, .message__item1 {
+   padding: 15px;
+   padding-bottom: 5px;
+   max-width: 50%;
+   border-radius: 5px;
+}
+
+.message__item {
+   padding-right: 0;
+   background-color: white;
+   margin-right: auto;
+   position: relative;
+   display: flex;
+}
+
+.message__item1 {
+   padding-right: 5px;
+   background-color: #DFF5FD;
+   margin: 10px 0;
+   margin-left: auto;
+   position: relative;
+   display: flex;
+}
+
+.message__box, .message__box1 {
+   display: flex;
+}
+
+.message__text {
+   line-height: 1.2;
+}
+
+.message__box2 {
+   margin-top: 20px;
+   display: flex;
+   align-items: center;
+   justify-self: flex-end;
+   margin-left: 5px;
+   max-width: 200px;
+   margin-left: auto;
+}
+
+.message__view__icon {
+   width: 0.7rem;
+}
+
+.message__time {
+   font-size: 0.7rem;
+}
+
+.message__check__icon {
+   width: 0.8rem;
+   margin-left: 5px;
+}

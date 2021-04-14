@@ -79,6 +79,17 @@ searchInputElement.addEventListener("click", event => {
    event.target.classList.add("border-input")
 })
 
+profileModal.addEventListener("click", () => {
+   chatModal.classList.remove('chatHidden')
+   shadowELement.classList.remove("shadowHidden")
+})
+
+userBtn.addEventListener("click", () => {
+   chatModal.classList.add('chatHidden')
+   shadowELement.classList.add("shadowHidden")
+
+})
+
 const DATA = [
    {
       id: 1, name: "John", photo: "./images/account__image1.jpg", date: moment(Date.now()).format('dddd'), number: "+998 00 000 00 00", message: [{

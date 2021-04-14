@@ -329,3 +329,22 @@ function renderMessages(parentElement, data) {
       parentElement.prepend(newLiElement)
    }
 }
+
+searchInputElement.addEventListener('input', e => {
+   if (!inputValue) {
+      renderUsers(usersListElement, malumot)
+   }
+   inputValue = e.target.value;
+   clearList()
+
+   let searchResult = malumot.filter(value => {
+      return value.name.toLowerCase().includes(inputValue)
+   })
+   renderUsers(usersListElement, searchResult)
+})
+
+function clearList() {
+   while (usersListElement.firstChild) {
+      usersListElement.removeChild(usersListElement.firstChild)
+   }
+}

@@ -90,3 +90,66 @@ a {
 .menu__header__text span {
    font-size: 15px;
 }
+
+/* 
+   MAIN SECTION
+*/
+
+.main__list {
+   margin-top: 20px;
+}
+
+.main__item {
+   padding: 10px;
+   padding-left: 30px;
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   transition: .3s;
+}
+
+.main__item:hover {
+   background-color: rgba(0,0,0,0.1);
+}
+
+.main__image {
+   width: 25px;
+}
+
+.main__text {
+   margin-left: 10px;
+   font-size: 14px;
+}
+
+.main__item:last-child {
+   display: flex;
+   justify-content: space-between;
+}
+
+.night {
+   display: flex;
+   align-items: center;
+}
+
+.mode {
+   background-color: rgba(0,0,0,0.1);
+   width: 35px;
+   height: 20px;
+   border-radius: 40px;
+   margin-right: 20px;
+}
+
+.mode__button {
+   background-color: white;
+   border-radius: 50%;
+   width: 20px;
+   height: 20px;
+   border: none;
+   outline: none;
+   transition: .3s;
+}
+
+.mode__button:focus {
+   transform: translateX(80%);
+   background-color:skyblue;
+}

@@ -579,3 +579,93 @@ a {
    width: 0.8rem;
    margin-left: 5px;
 }
+
+/* 
+   RIGHT APP FOOTER SECTION
+*/
+
+.right_app__footer {
+   width: calc(100vw - 300px);
+   height: 50px;
+   position: relative;
+}
+
+.emoji-list {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   width: 20%;
+   background-color: white;
+   border: 1px solid rgba(0,0,0,0.5);
+   position: absolute;
+   z-index: 5;
+   bottom: 120%;
+   right: 5%;
+}
+
+.emoji-item {
+   padding:  15px  10px;
+   cursor: pointer;
+   font-size: 20px;
+}
+
+.emojiListHidden {
+   display: none;
+}
+
+.message__form {
+   width: 100%;
+   height: 50px;
+   display: flex;
+   align-items: center;
+}
+
+.paper__button {
+   margin-left: 10px;
+   width: 30px;
+   border: none;
+   outline: none;
+   background-color: transparent;
+   cursor: pointer;
+}
+
+.paper-clip {
+   width: 100%;
+}
+
+.message__textarea {
+   outline: none;
+   min-height: 1%;
+   font-size: 17px;
+   padding: 0 10px;
+   width: 97%;
+   resize: none;
+   border: none;
+   overflow: hidden;
+}
+
+.emoji__button {
+   background-color: transparent;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   margin-right: 10px;
+}
+
+.emoji__icon__img {
+   width: 30px;
+}
+
+.message__send__button {
+   width: 3%;
+   height: 50px;
+   border: none;
+   outline: none;
+   background-color: transparent;
+   padding-right: 10px;
+   cursor: pointer;
+}
+
+.message__send__icon {
+   width: 100%;
+}

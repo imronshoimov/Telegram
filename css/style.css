@@ -200,3 +200,63 @@ a {
 .search__input::placeholder {
    font-size: 13px;
 }
+
+/* 
+   CHATS SECTION
+*/
+
+.chats {
+   height:  calc(100vh - 70px);
+   overflow-y: scroll;
+}
+
+/* 
+   ACCOUNT SECTION
+*/
+
+.account__item {
+   display: flex;
+   align-items: center;
+   margin: 10px 0;
+   padding: 5px 10px;
+   transition: background .3s;
+   cursor: pointer;
+}
+
+.account__item:hover {
+   background-color: rgba(0,0,0,0.1);
+}
+
+.account__item1 {
+   margin-bottom: 0;
+   padding-bottom: 0;
+}
+
+.account__image {
+   border-radius: 50%;
+   width: 55px;
+}
+
+.account__text {
+   margin-left: 15px;
+}
+
+.account__name {
+   font-size: 1rem;
+   font-weight: 500;
+}
+
+.account__slog {
+   margin-top: 3px;
+   color: rgba(0,0,0,0.6);
+   font-size: 0.9rem;
+   color: #1AB6E8;
+}
+
+.account__time {
+   align-self: flex-start;
+   margin-left: auto;
+   margin-right: 10px;
+   margin-top: 10px;
+   font-size: 0.9rem;
+}

@@ -669,3 +669,44 @@ a {
 .message__send__icon {
    width: 100%;
 }
+
+/* 
+   SETTINGS MODAL SECTION
+*/
+
+.settings__modal {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 27%;
+   height: 95%;
+   overflow-y: scroll;
+   background-color: white;
+   border-radius: 5px;
+   z-index: 4;
+   transition: .4s;
+}
+
+.settingsHidden {
+   display: none;
+}
+
+.settings__modal__header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 30px;
+   border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.settings__modal__title {
+   font-size: 21px;
+   font-weight: normal;
+}
+
+.settings__modal div {
+   display: flex;
+   align-items: center;
+   position: relative;
+}

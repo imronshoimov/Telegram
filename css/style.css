@@ -594,7 +594,7 @@ a {
    display: flex;
    justify-content: space-around;
    flex-wrap: wrap;
-   width: 20%;
+   width: 30%;
    background-color: white;
    border: 1px solid rgba(0,0,0,0.5);
    position: absolute;
@@ -986,11 +986,19 @@ a {
    .profile__section .profile__modal {
       width: 500px;
    }
+
+   .emoji-list {
+      width: 60%;
+   }
 }
 
 @media (max-width: 850px){
    .profile__section .profile__modal {
       width: 400px;
+   }
+
+   .emoji-list {
+      width: 80%;
    }
 }
 

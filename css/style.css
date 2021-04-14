@@ -423,3 +423,70 @@ a {
 .chatHidden {
    display: none;
 }
+
+/* 
+   RIGHT APP HEADER SECTION
+*/
+
+.right_app__header {
+   display: flex; 
+   justify-content: space-between;
+   align-items: center;
+   padding: 5px 15px;
+   border: 1px solid rgba(0,0,0,0.1);
+   cursor: pointer;
+   height: 70px;
+}
+
+.profile__section {
+   display: flex;
+   align-items: center;
+}
+
+.profile__section .profile__modal {
+   margin-left: 10px;
+   width: 900px;
+}
+
+.left-arrow_button {
+   display: none;
+   border: none;
+   outline: none;
+   background-color: transparent;
+   padding: 10px;
+   cursor: pointer;
+}
+
+.left-arrow {
+   width: 30px;
+}
+
+.profile__name {
+   font-size: 1.3rem;
+}
+
+.profile__slog {
+   color: rgba(0,0,0,0.6);
+}
+
+.profile__image {
+   display: flex;
+   align-items: center;
+}
+
+.profile__icon__button {
+   border: none;
+   outline: none;
+   background-color: transparent;
+   padding: 0 5px;
+   cursor: pointer;
+}
+
+.profile__icon1 {
+   width: 20px;
+}
+
+.profile__icon {
+   width: 28px;
+   margin-left: 5px;
+}

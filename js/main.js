@@ -78,3 +78,86 @@ threeDot.addEventListener("click", event => {
 searchInputElement.addEventListener("click", event => {
    event.target.classList.add("border-input")
 })
+
+const DATA = [
+   {
+      id: 1, name: "John", photo: "./images/account__image1.jpg", date: moment(Date.now()).format('dddd'), number: "+998 00 000 00 00", message: [{
+         body: "Salom qalaysan?", isMine: true
+      },
+      {
+         body: "Rahmat", isMine: false
+      }]
+   },
+   {
+      id: 2, name: "ADAM", photo: "./images/account__image2.jpg", date: moment(Date.now()).startOf('day').fromNow(), number: "+998 11 111 11 11", message: [{
+         body: "Salom?", isMine: true
+      },
+      {
+         body: "Salom...", isMine: false
+      }]
+   },
+   {
+      id: 3, name: "Dwane", photo: "./images/account__image4.jpg", date: moment(Date.now()).endOf('day').fromNow(), number: "+998 22 222 22 22", message: [{
+         body: "Assalomu alaykum", isMine: true
+      },
+      {
+         body: "Qalaysan?", isMine: false
+      }]
+   },
+   {
+      id: 4, name: "Bill", photo: ".//images/picsum-rand3.jpg", date: moment(Date.now()).startOf('hour').fromNow(), number: "+998 33 333 33 33", message: [{
+         body: "Will you come to the party?", isMine: true
+      },
+      {
+         body: "I don't know...", isMine: false
+      }]
+   },
+   {
+      id: 5, name: "Johnson", photo: ".//images/picsum-rand2.jpg", date: moment(Date.now()).calendar(), number: "+998 44 444 44 44", message: [{
+         body: "How do you do?", isMine: true
+      },
+      {
+         body: "Well, and you?", isMine: false
+      }]
+   },
+   {
+      id: 6, name: "Adam", photo: ".//images/picsum-rand1.jpg", date: moment(Date.now()).format('LT'), number: "+998 55 555 55 55", message: [{
+         body: "Where would you visit tomorrow?", isMine: true
+      },
+      {
+         body: "Tashkent", isMine: false
+      }]
+   },
+   {
+      id: 7, name: "Ronk", photo: ".//images/picsum-rand4.jpg", date: moment(Date.now()).startOf('day').fromNow(), number: "+998 66 666 66 66", message: [{
+         body: "Are you okay?", isMine: true
+      },
+      {
+         body: "I'm fine, how is it going, Baxtiyor", isMine: false
+      }]
+   },
+   {
+      id: 8, name: "King", photo: ".//images/picsum-rand5.jpg", date: moment(Date.now()).format("MMM Do YY"), number: "+998 77 777 77 77", message: [{
+         body: "Align - items ni flex-end qilasiz", isMine: true
+      },
+      {
+         body: "rahmat", isMine: false
+      }]
+   },
+   {
+      id: 9, name: "Johny", photo: ".//images/picsum-rand6.jpg", date: moment(Date.now()).format('dddd'), number: "+998 88 888 88 88", message: [{
+         body: "Assalomu alaykum", isMine: true
+      },
+      {
+         body: "Va aleykum assalom", isMine: false
+      }]
+   },
+   {
+      id: 10, name: "Barbara", photo: ".//images/picsum-rand7.jpg", date: moment(Date.now()).startOf('hour').fromNow(), number: "+998 99 999 99 99", message: [{
+         body: "Еще точно не знаю", isMine: true
+      },
+      {
+         body: "Хорошо,тогда  вы сообщите об этом.", isMine: false
+      }]
+   }
+]

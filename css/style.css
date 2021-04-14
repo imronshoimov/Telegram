@@ -921,3 +921,167 @@ a {
 .settings__modal__footer__text {
    margin-left: 55px;
 }
+
+@media (max-width: 1300px){
+   .profile__section .profile__modal {
+      width: 780px;
+   }
+}
+ 
+
+@media (max-width: 1200px){
+   .main_app {
+      width: 100%;
+   }
+
+   .message__send__button {
+      width: 40px;
+   }
+
+   .settings__modal {
+      width: 40%;
+      height: 90%;
+   }
+
+   .chat__modal {
+      width: 45%;
+      height: 95%;
+   }
+   
+   .profile__section .profile__modal {
+      width: 700px;
+   }
+}
+
+@media (max-width: 1050px){
+   .main_app {
+      width: 100%;
+   }
+   
+   .chat__modal {
+      width: 60%;
+      height: 95%;
+   } 
+
+   .profile__section .profile__modal {
+      width: 600px;
+   }
+}
+
+@media (max-width: 950px){
+   .main_app {
+      width: 100%;
+   }
+
+   .settings__modal {
+      width: 50%;
+      height: 90%;
+   }
+
+   .chat__modal {
+      width: 55%;
+      height: 95%;
+   }
+
+   .profile__section .profile__modal {
+      width: 500px;
+   }
+}
+
+@media (max-width: 850px){
+   .profile__section .profile__modal {
+      width: 400px;
+   }
+}
+
+@media (max-width: 750px){
+   .main_app {
+      width: 100%;
+   }
+
+   .left_app {
+      width: 100%;
+   }
+
+   .right_app {
+      position: absolute;
+      width: 100%;
+   }
+
+   .chat-hidden {
+      display: none;
+   }
+
+   .right_app__header {
+      background-color: white;
+   }
+
+   .right_app__main {
+      width: 100vw;
+   }
+
+   .right_app__footer {
+      background-color: white;
+      width: 100%;
+      z-index: 1;
+   }
+
+   .settings__modal {
+      width: 60%;
+      height: 95%;
+   }
+
+   .chat__modal {
+      width: 70%;
+      height: 95%;
+      left: 80%;
+   }
+
+   .left-arrow_button {
+      display: block;
+   }
+
+   .profile__section .profile__modal {
+      width: 400px;
+   }
+}
+
+@media (max-width: 650px){
+   .main_app {
+      width: 100%;
+   }
+
+   .settings__modal {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+   }
+
+   .chat__modal {
+      width: 90%;
+      height: 100%;
+      left: 80%;
+   }
+}
+
+@media (max-width: 550px){
+   .main_app {
+      width: 100%;
+   }
+
+   .chat__modal {
+      width: 90%;
+      height: 100%;
+      left: 80%;
+   }
+
+   .profile__section .profile__modal {
+      width: 300px;
+   }
+}
+
+@media (max-width: 550px){
+   .profile__section .profile__modal {
+      width: 130px;
+   }
+}

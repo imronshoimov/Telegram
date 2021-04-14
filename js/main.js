@@ -161,3 +161,160 @@ const DATA = [
       }]
    }
 ]
+
+let malumot = JSON.parse(localStorage.getItem("data")) || DATA
+localStorage.setItem("data", JSON.stringify(malumot))
+
+for (let item of emojies) {
+   let newLiElement = document.createElement("li")
+   newLiElement.classList.add("emoji-item")
+   newLiElement.textContent = item
+   emojiList.appendChild(newLiElement)
+
+   newLiElement.addEventListener("click", () => {
+      messagesTextInput.value += item
+   })
+}
+
+emojiButton.addEventListener('click', evt => {
+   emojiList.classList.toggle("emojiListHidden")
+   evt.preventDefault()
+   messagesTextInput.focus()
+})
+
+messagesTextInput.addEventListener("keyup", event => {
+   if (event.keyCode == 13) {
+      if (messagesTextInput.value == 0) return
+      let messageBody = event.target.value
+      let userData = malumot.find(user => user.id == currentChat)
+      let userIndex = malumot.findIndex(user => user.id == currentChat)
+      malumot[userIndex] = userData
+      localStorage.setItem("data", JSON.stringify(malumot))
+
+      userData.message.push({
+         body: messageBody,
+         isMine: true
+      })
+
+      renderMessages(messagesListElement, userData.message)
+      localStorage.setItem("data", JSON.stringify(malumot))
+      event.target.value = ""
+   }
+})
+
+messageTextForm.addEventListener("submit", evt => {
+   evt.preventDefault()
+   if (messagesTextInput.value == 0) return
+   let messageBody = messagesTextInput.value
+   let userData = malumot.find(user => user.id == currentChat)
+   let userIndex = malumot.findIndex(user => user.id == currentChat)
+   malumot[userIndex] = userData
+   localStorage.setItem("data", JSON.stringify(malumot))
+   userData.message.push({
+      body: messageBody,
+      isMine: true
+   })
+   localStorage.setItem("data", JSON.stringify(malumot))
+
+   renderMessages(messagesListElement, userData.message)
+   localStorage.setItem("data", JSON.stringify(malumot))
+   evt.target.reset()
+   evt.target.focus()
+})
+
+
+renderUsers(usersListElement, malumot)
+
+function renderUsers(parentElement, data) {
+   for (let user of data) {
+      let newLiElement = document.createElement("li")
+      let newImgElement = document.createElement("img")
+      let newSpanElement = document.createElement("span")
+      let newH2Element = document.createElement("h2")
+      let newPElement = document.createElement("p")
+      let newTimePlement = document.createElement("p")
+
+      newLiElement.classList.add("account__item")
+      newImgElement.classList.add("account__image")
+      newSpanElement.classList.add("account__text")
+      newH2Element.classList.add("account__name")
+      newPElement.classList.add("account__slog")
+      newTimePlement.classList.add("account__time")
+
+      newImgElement.src = user.photo
+      newH2Element.textContent = user.name
+      newTimePlement.textContent = user.date
+      newPElement.textContent = "Hello"
+
+
+      newLiElement.addEventListener("click", () => {
+         renderMessages(messagesListElement, user.message)
+         localStorage.setItem("data", JSON.stringify(malumot))
+         currentChat = user.id
+         profileName.textContent = user.name
+         profileTime.textContent = user.date
+         messagesTextInput.disabled = false
+
+         rightAppMain.classList.remove("chat-hidden")
+
+         localStorage.getItem("data")
+
+         rightAppHeader.addEventListener('click', evt => {
+            infoNameImg.src = user.photo
+            infoNameText.textContent = user.name
+            infoNameTime.textContent = user.date
+            mobileNum.textContent = user.number
+         })
+      })
+      newSpanElement.appendChild(newH2Element)
+      newSpanElement.appendChild(newPElement)
+
+      newLiElement.appendChild(newImgElement)
+      newLiElement.appendChild(newSpanElement)
+      newLiElement.appendChild(newTimePlement)
+      parentElement.appendChild(newLiElement)
+   }
+}
+
+function renderMessages(parentElement, data) {
+   parentElement.textContent = ""
+   for (let messages of data) {
+      let newLiElement = document.createElement("li")
+      let newDiv1Element = document.createElement("div")
+      let newDiv2Element = document.createElement("div")
+      let newPElement = document.createElement("p")
+      let newTimeElement = document.createElement("p")
+      let newCheckElement = document.createElement("img")
+
+      if (messages.isMine) {
+         newLiElement.classList.add("message__item1")
+         newDiv1Element.classList.add("message__box1")
+         newDiv2Element.classList.add("message__box2")
+         newPElement.classList.add("message__text")
+         newTimeElement.classList.add("message__time")
+         newCheckElement.classList.add("message__check__icon")
+
+         newPElement.textContent = messages.body
+         newTimeElement.textContent = moment(Date.now()).format('LT');
+         newCheckElement.src = `./images/check.svg`
+      } else {
+         newLiElement.classList.add("message__item")
+         newDiv1Element.classList.add("message__box")
+         newDiv2Element.classList.add("message__box2")
+         newPElement.classList.add("message__text")
+         newTimeElement.classList.add("message__time")
+         newCheckElement.classList.add("message__check__icon")
+
+         newPElement.textContent = messages.body
+         newTimeElement.textContent = moment(Date.now()).format('LT');
+      }
+
+      newDiv2Element.appendChild(newTimeElement)
+      newDiv2Element.appendChild(newCheckElement)
+      newDiv1Element.prepend(newPElement)
+      newLiElement.prepend(newDiv1Element)
+      newLiElement.appendChild(newDiv2Element)
+
+      parentElement.prepend(newLiElement)
+   }
+}

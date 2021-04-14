@@ -35,3 +35,46 @@ let usersListElement = document.querySelector(".account__list")
 let messagesListElement = document.querySelector(".message__list")
 let messageTextForm = document.querySelector(".message__form")
 let messagesTextInput = document.querySelector(".message__textarea")
+
+let emojies = ["😀", "😃", "😋", "😅", "😏", "😀", "😃", "😄", "😁", "😆", "😄", "😅", "😂", "😏", "😞", "😅", "😚", "🙊", "😌", "😀", "😋", "😆", "😐", "😕", "🥶", "😱", "😨", "😰", "😥", "😓", "🤗", "🤔", "🤭", "🤫", "🤥", "😶", "😐", "😑", "😬", "🙄", "😯", "😦", "😧", "😮", "😲", "🥱", "😴", "🤤", "😪", "😵", "🤐", "🥴", "🤚", "🖐", "✋"]
+
+let inputValue = ""
+let currentChat = 1
+
+leftArrowButton.addEventListener("click", () => {
+   rightAppMain.classList.add("chat-hidden")
+   shadowELement.classList.add("shadowHidden")
+})
+
+shadowELement.addEventListener("click", (evt) => {
+   menuElement.classList.add("hidden")
+   shadowELement.classList.toggle("shadowHidden")
+   settingsModalElement.classList.add("settingsHidden")
+   menuElement.style.transform = "translateX(-100%)"
+   chatModal.classList.add('chatHidden')
+})
+
+hamburgerButtonElement.addEventListener("click", evt => {
+   menuElement.classList.remove("hidden")
+   shadowELement.classList.remove("shadowHidden")
+   menuElement.style.transform = "translateX(0)"
+})
+
+settingsElement.addEventListener("click", evt => {
+   settingsModalElement.classList.remove("settingsHidden")
+   menuElement.classList.add("hidden")
+   menuElement.style.transform = "translateX(-100%)"
+})
+
+closeSettings.addEventListener("click", evt => {
+   settingsModalElement.classList.add("settingsHidden")
+   shadowELement.classList.toggle("shadowHidden")
+})
+
+threeDot.addEventListener("click", event => {
+   threedotList.classList.toggle("threedotHidden")
+})
+
+searchInputElement.addEventListener("click", event => {
+   event.target.classList.add("border-input")
+})
